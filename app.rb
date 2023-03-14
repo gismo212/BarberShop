@@ -27,8 +27,8 @@ post'/visit' do
 	@color=params[:color]
 
 	hh={:username=>'Enter name',
-	:number=>'Enter phone',
-	:datetime=>'Enter date to visit'}
+	:datetime=>'Enter date to visit',
+	:number=>'Enter phone'}
 
 	hh.each do |key,value|       
 		if params[key]==''       

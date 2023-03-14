@@ -28,9 +28,9 @@
   <div class="mb-3">
     <label>You'r barber </label>
    <select name="barber"class="form-select">
-    <option value="Peter">Peter</option>
-    <option value="Jerry">Jerry</option>
-    <option value="Gus">Gus</option>
+    <option <%=@barber=='Peter'? 'selected':''%> >Peter</option>
+    <option <%=@barber=='Jerry'? 'selected':''%> >Jerry</option>
+    <option   <%=@barber=='Gus'? 'selected':''%> >Gus</option>
    </select>
   </div>
 
