@@ -3,7 +3,8 @@
 
 <script type="text/javascript">
   $(function() {
-  $('#color').simplecolorpicker() 
+  $('#color').simplecolorpicker(); 
+  $('#datetimepicker').datetimepicker();
 	
   });
 
@@ -17,7 +18,7 @@
   </div>
   <div class="mb-3">
     <label>Time to visit </label>
-    <input  name="datetime" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=@datetime%>">
+    <input id="datetimepicker" name="datetime" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=@datetime%>">
   </div>
   <div class="mb-3">
     <label>You'r number </label>
