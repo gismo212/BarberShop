@@ -3,8 +3,6 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sqlite3'
 
-
-
 def get_db
 	db=SQLite3::Database.new 'barbershop.db'
 	db.results_as_hash=true
@@ -29,7 +27,10 @@ end
 
 get'/' do
 	erb "Hello! <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\">Original</a> pattern has been modified for <a href=\"http://rubyschool.us/\">Ruby School</a>"			
+
 end
+
+
 
 #ñíà÷àëà èñïîëüçóåì git clone à äàëüøå ïîñòîÿííî git pull
 #git pull rîïèðîâàíèå ïî ññûëêå ôàéëû èç îíëàéí ðåïîçèòîðèÿ
@@ -66,19 +67,7 @@ post'/visit' do
 
 
 	erb "You'r name:#{@username},you'r phone:#{@phone},time to visit:#{@date_time},you'barber:#{@barber},#{@color}" # возможность просмотра введенных данных сразу
-
-
 end
-
-
-# ger '/showusers' do
-# 	erb:"Hello world"
-
-# end
-
-
-
-
 
 get'/contacts' do
 	erb :contacts
@@ -87,12 +76,18 @@ end
 post'/contacts' do
 	@mail=params[:mail]
 
-	#info=File.open('./public/info.txt','a')
-	#info.write "You'r mail:#{@mail}"
 	if @mail==''
 		@error="Enter mail:"
 		erb :contacts
 	end
 
-	#info.close
+end
+
+
+get '/showusers' do
+	erb:showusers
+end
+
+post '/showusers' do
+	erb:showusers	
 end
