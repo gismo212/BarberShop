@@ -85,9 +85,8 @@ end
 
 
 get '/showusers' do
+	db=get_db
+	@results=db.execute'select * from users order by id'
 	erb:showusers
 end
 
-post '/showusers' do
-	erb:showusers	
-end
