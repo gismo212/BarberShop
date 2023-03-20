@@ -91,7 +91,7 @@ post'/visit' do
 	db.execute 'INSERT INTO Users (username, phone, datastamp, barber, color) VALUES (?, ?, ?, ?, ?)', [@username, @phone, @datetime, @barber, @color]
 
 
-	erb "You'r name:#{@username},you'r phone:#{@phone},time to visit:#{@date_time},you'barber:#{@barber},#{@color}" # возможность просмотра введенных данных сразу
+	erb "<h2>Спасибо,вы записаны</h2>" 
 end
 
 get'/contacts' do
