@@ -35,7 +35,7 @@ configure do
 	"id" INTEGER PRIMARY KEY AUTOINCREMENT,
 	 "username" TEXT,
 	  "phone" TEXT,
-	  "datastamp" TEXT,
+	  "datestamp" TEXT,
 	  "barber" TEXT,
 	  "color" TEXT)'
 
@@ -61,7 +61,6 @@ end
 #git pull rîïèðîâàíèå ïî ññûëêå ôàéëû èç îíëàéí ðåïîçèòîðèÿ
 
 get'/about' do
-	@error='something  wrong!'
 	erb :about
 end
 
